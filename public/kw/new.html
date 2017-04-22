@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="../css/reset.css" rel="stylesheet">
+    <link type="text/css" href="../css/index.css" rel="stylesheet">
+    <link type="text/css" href="../css/about.css" rel="stylesheet">
+    <!--<link type="text/css" href="./css/swiper-3.4.2.min.css" rel="stylesheet">-->
+    <!--<link href="./css/share/pt_lib_macro.css" type="text/css" rel="stylesheet"/>-->
+    <style>
+        w-wb1 .wb10 {
+            overflow: hidden;
+            display: block;
+            width: 38px;
+            height: 35px;
+            text-indent: -9999px;
+            background: url(style/images/img/tieba24.png) -43px 0 no-repeat;
+        }
+
+        .w-wb1 .wb10:hover {
+            background-position: 1px 0;
+        }
+
+        /* 微信分享弹层样式 */
+        .towdimcodelayer {
+            position: absolute;
+            left: -50px;
+            top: -215px;
+            z-index: 10000;
+            margin-top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .js-transition {
+            transition: margin-top .15s ease, opacity .12s linear;
+            -webkit-transition: margin-top .15s ease, opacity .12s linear;
+            -moz-transition: margin-top .18s ease, opacity .15s linear;
+            -ms-transition: margin-top .15s ease, opacity .12s linear;
+            -o-transition: margin-top .15s ease, opacity .12s linear;
+        }
+
+        .towdimcodelayer .arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-style: solid;
+            _display: none;
+        }
+
+        .towdimcodelayer .js-arrow-up {
+            left: 72px;
+            top: -15px;
+            border-color: transparent transparent #191919 transparent;
+        }
+
+        .towdimcodelayer .js-arrow-down {
+            left: 72px;
+            bottom: -15px;
+            border-color: #191919 transparent transparent transparent;
+        }
+
+        .towdimcodelayer .layerbd {
+            width: 100px;
+            height: 150px;
+            padding: 30px 30px 0 30px;
+            background: #191919;
+            box-shadow: 0 1px 3px #000;
+            -webkit-box-shadow: 0 1px 3px #000;
+            -moz-box-shadow: 0 1px 3px #000;
+            -o-box-shadow: 0 1px 3px #000;
+        }
+
+        .towdimcodelayer .codebg {
+            width: 75px;
+            height: 75px;
+            padding: 13px 12px 12px 13px;
+            background: #fff;
+        }
+
+        .towdimcodelayer .codebg img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .towdimcodelayer .codettl {
+            height: 22px;
+            line-height: 22px;
+            margin-top: 5px;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .js-show-up {
+            margin-top: 15px;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+
+        .js-show-down {
+            margin-top: -15px;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-wrapper">
+    <div class="header-t">
+        <div class="logo">111</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="product.html">产品</a></li>
+                <li><a href="news.html">动态</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="pic">
+
+</div>
+
+<div class="h-50"></div>
+
+<div class="main">
+
+    <div class="new">
+        <div class="new-title">
+            基于MATLAB的单相桥式整流电路研究
+            <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#"
+                                                                                              class="bds_weixin"
+                                                                                              data-cmd="weixin"
+                                                                                              title="分享到微信"></a><a
+                    href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina"
+                                                                                       data-cmd="tsina"
+                                                                                       title="分享到新浪微博"></a><a href="#"
+                                                                                                              class="bds_tqq"
+                                                                                                              data-cmd="tqq"
+                                                                                                              title="分享到腾讯微博"></a><a
+                    href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
+            <script>window._bd_share_config = {
+                "common": {
+                    "bdSnsKey": {},
+                    "bdText": "",
+                    "bdMini": "2",
+                    "bdMiniList": false,
+                    "bdPic": "",
+                    "bdStyle": "1",
+                    "bdSize": "32"
+                },
+                "share": {},
+                "image": {
+                    "viewList": ["weixin", "qzone", "tsina", "tqq", "renren"],
+                    "viewText": "分享到：",
+                    "viewSize": "32"
+                },
+                "selectShare": {
+                    "bdContainerClass": null,
+                    "bdSelectMiniList": ["weixin", "qzone", "tsina", "tqq", "renren"]
+                }
+            };
+            with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        </div>
+
+        <div>
+            <ul class="w-wb1">
+                <li class="f-pr">
+                    <a href="javascript:void(0)" class="wb11" onmouseover="onMouseoverXCode()"
+                       onmouseout="onMouseoutXCode()">分享到微信</a>
+                    <div class="towdimcodelayer js-transition" id="layerWxcode">
+                        <div class="arrow js-arrow-down"></div>
+                        <div class="layerbd">
+                            <div class="codebg"><img class="xtag"
+                                                     src="http://www.lofter.com/genBitmaxImage?url=http://www.jq-school.com/?act=qbwzywxfx_20141226_01">
+                            </div>
+                            <div class="codettl">打开微信扫一扫</div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"
+                       onclick="dolog('sina', function(){window.open('http://v.t.sina.com.cn/share/share.php?title=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。') + '&pic=' + encodeURIComponent('http://www.jq-school.com/images/logo.gif') + '&sourceUrl=http%3A%2F%2Fwww.lofter.com&appkey=895033136', '_parent', ['toolbar=0,status=0,resizable=1,width=630,height=500,left=',(screen.width-630)/2,',top=',(screen.height-500)/2].join(''));return false;});"
+                       class="wb1" title="分享到新浪微博">分享到新浪微博</a></li>
+                <li><a href="#"
+                       onclick="dolog('baidutieba', function(){window.open('http://tieba.baidu.com/f/commit/share/openShareApi?title=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区') + '&url=' + encodeURIComponent('http://www.jq-school.com/') + '&pic=' + encodeURIComponent('http://www.jq-school.com/images/logo.gif'), '_parent', ['toolbar=0,status=0,resizable=1,width=600,height=520,left=',(screen.width-600)/2,',top=',(screen.height-520)/2].join(''));return false;});"
+                       class="wb10" title="分享到百度贴吧">分享到百度贴吧</a></li>
+
+                <li><a href="#"
+                       onclick="dolog('douban', function(){window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent('http://www.jq-school.com/') + '&name=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。') + '&image=' + encodeURIComponent('http://www.jq-school.com/images/logo.gif'), '_parent', ['toolbar=0,status=0,resizable=1,width=640,height=340,left=',(screen.width-640)/2,',top=',(screen.height-340)/2].join(''));return false;});"
+                       class="wb3" title="分享到豆瓣">分享到豆瓣</a></li>
+                <li><a href="#"
+                       onclick="dolog('qq', function(){window.open('http://v.t.qq.com/share/share.php?c=share&a=index&appkey=5bd32d6f1dff4725ba40338b233ff155&title=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。') + '&pic=' + encodeURIComponent('http://www.jq-school.com/images/logo.gif'), '_parent', ['toolbar=0,status=0,resizable=1,width=630,height=500,left=',(screen.width-630)/2,',top=',(screen.height-500)/2].join(''));return false;});"
+                       class="wb4" title="分享到腾讯微博">分享到腾讯微博</a></li>
+                <li><a href="#"
+                       onclick="dolog('qzone', function(){window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。') + '&url=' + encodeURIComponent('http://www.jq-school.com/'), '_parent', ['toolbar=0,status=0,resizable=1,width=600,height=520,left=',(screen.width-600)/2,',top=',(screen.height-520)/2].join(''));return false;});"
+                       class="wb5" title="分享到QQ空间">分享到QQ空间</a></li>
+                <li><a href="#"
+                       onclick="dolog('renren', function(){window.open('http://share.renren.com/share/buttonshare.do?link=' + encodeURIComponent('http://www.jq-school.com/') + '&title=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。'), '_parent', ['toolbar=0,status=0,resizable=1,width=630,height=500,left=',(screen.width-630)/2,',top=',(screen.height-500)/2].join(''));return false;});"
+                       class="wb6" title="分享到人人网">分享到人人网</a></li>
+                <li><a href="#"
+                       onclick="dolog('kaixin', function(){window.open('http://www.kaixin001.com/repaste/share.php?rtitle=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。'), '_parent', ['toolbar=0,status=0,resizable=1,width=670,height=360,left=',(screen.width-670)/2,',top=',(screen.height-360)/2].join(''));return false;});"
+                       class="wb7" title="分享到开心网">分享到开心网</a></li>
+                <li><a href="#"
+                       onclick="dolog('facebook', function(){window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.jq-school.com/') + '&t=' + encodeURIComponent('jqueryschool是国内最大的jquery原创分享社区，专门分享原创jquery插件、jquery工具、jquery特效、html5、css3、jquery教程的网站，分享原创设计，把开发代码封装成插件，最短时间掌握jquery知识。'), '_parent', ['toolbar=0,status=0,resizable=1,width=660,height=280,left=',(screen.width-660)/2,',top=',(screen.height-280)/2].join(''));return false;});"
+                       class="wb8" title="分享到Facebook">分享到Facebook</a></li>
+                <li><a href="#"
+                       onclick="dolog('twitter', function(){window.open('http://twitter.com/intent/tweet?url=' + encodeURIComponent('http://www.jq-school.com/') + '&text=' + encodeURIComponent('《mysql Java jsp\\/servlet Tomcat完美解决乱码问题详细教程》 今天被乱码问题搞了好久= = 心累 然后说一下解决方案 1.mysql的 1)windows http:\\/\\/www.2cto.com\\/dat...  （分享自www.jq-school.com）'), '_parent', ['toolbar=0,status=0,resizable=1,width=660,height=280,left=',(screen.width-660)/2,',top=',(screen.height-280)/2].join(''));return false;});"
+                       class="wb9" title="分享到Twitter">分享到Twitter</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+
+<div class="all-width h-b-120"></div>
+
+<div class="clear"></div>
+
+
+<div class="all-width h-b-120 tel">
+    <div></div>
+</div>
+
+<div class="all-width news-bg">
+    <div class="h-20"></div>
+    <div class="news-title">
+        <div class="news-title-l">
+            <p>行业新闻/NEWS</p>
+        </div>
+        <div class="news-title-r">
+            <p>查看更多...</p>
+        </div>
+    </div>
+</div>
+
+<div class="all-width index-news">
+    <div class="news-wrapper">
+
+        <div class="news-body">
+            <ul>
+                <li class="news-li">
+                    <div class="news-div news-div-l news-div-l1">
+                        <img width="200px" height="150px" src="../img/pro/news1.jpg">
+                    </div>
+                    <div class="news-div news-div-r news-div-r1">
+                        <p class="new-t1">工程案例-马路拉管1</p>
+                        <p class="new-t2">2017/01/01</p>
+                        <p class="new-t3">　1、顶管工作井施工，井内设集水坑，便于抽排积水；
+                            2、后靠背设置，工作井基础设定后，根据管道走向设
+                            2、后靠背设置，工作井基础设定后，根据管道走向设</p>
+                    </div>
+                </li>
+                <li class="news-li">
+                    <div class="news-div news-div-l news-div-l2">
+                        <img width="200px" height="150px" src="../img/pro/news2.jpg">
+                    </div>
+                    <div class="news-div news-div-r news-div-r2">
+                        <p class="new-t1">工程案例-电力拉管顶管</p>
+                        <p class="new-t2">2017/01/01</p>
+                        <p class="new-t3">　1、顶管工作井施工，井内设集水坑，便于抽排积水；
+                            2、后靠背设置，工作井基础设定后，根据管道走向设
+                            2、后靠背设置，工作井基础设定后，根据管道走向设</p>
+                    </div>
+                </li>
+                <li class="news-li">
+                    <div class="news-div news-div-l news-div-l3">
+                        <img width="200px" height="150px" src="../img/pro/news3.jpg">
+                    </div>
+                    <div class="news-div news-div-r news-div-r3">
+                        <p class="new-t1">工程案例-城市管道</p>
+                        <p class="new-t2">2017/01/01</p>
+                        <p class="new-t3">　1、顶管工作井施工，井内设集水坑，便于抽排积水；
+                            2、后靠背设置，工作井基础设定后，根据管道走向设
+                            2、后靠背设置，工作井基础设定后，根据管道走向设</p>
+                    </div>
+                </li>
+                <li class="news-li">
+                    <div class="news-div news-div-l news-div-l4">
+                        <img width="200px" height="150px" src="../img/pro/news4.jpg">
+                    </div>
+                    <div class="news-div news-div-r news-div-r4">
+                        <p class="new-t1">工程案例-燃气管道</p>
+                        <p class="new-t2">2017/01/01</p>
+                        <p class="new-t3">　1、顶管工作井施工，井内设集水坑，便于抽排积水；
+                            2、后靠背设置，工作井基础设定后，根据管道走向设
+                            2、后靠背设置，工作井基础设定后，根据管道走向设</p>
+                    </div>
+                </li>
+                <li class="news-li">
+                    <div class="news-div news-div-l news-div-l3">
+                        <img width="200px" height="150px" src="../img/pro/news5.jpg">
+                    </div>
+                    <div class="news-div news-div-r news-div-r3">
+                        <p class="new-t1">工程案例-马路拉管</p>
+                        <p class="new-t2">2017/01/01</p>
+                        <p class="new-t3">　1、顶管工作井施工，井内设集水坑，便于抽排积水；
+                            2、后靠背设置，工作井基础设定后，根据管道走向设
+                            2、后靠背设置，工作井基础设定后，根据管道走向设</p>
+                    </div>
+                </li>
+                <li class="news-li">
+                    <div class="news-div news-div-l news-div-l4">
+                        <img width="200px" height="150px" src="../img/pro/news6.jpg">
+                    </div>
+                    <div class="news-div news-div-r news-div-r4">
+                        <p class="new-t1">工程案例-污水管道置换</p>
+                        <p class="new-t2">2017/01/01</p>
+                        <p class="new-t3">　1、顶管工作井施工，井内设集水坑，便于抽排积水；
+                            2、后靠背设置，工作井基础设定后，根据管道走向设
+                            2、后靠背设置，工作井基础设定后，根据管道走向设</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="all-width news-bg">
+    <div class="h-20"></div>
+    <div class="news-title">
+        <div class="news-title-l">
+            <p>施工设备/EQUIPMENT</p>
+        </div>
+        <div class="news-title-r">
+            <p>查看更多...</p>
+        </div>
+    </div>
+    <div class="h-20"></div>
+</div>
+
+
+<div class="all-width sli-product">
+    <div class="img-wrapper" id="pro">
+        <!-- Swiper -->
+        <div class="swiper-container" id="pro-con">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei1.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei2.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei3.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei4.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei5.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei6.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei7.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei1.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei2.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei3.jpg"/></div>
+                <div class="swiper-slide"><img class="img-slide"
+                                               data-src="./img/pro/sebei4.jpg"/></div>
+                <!-- Add Pagination -->
+                <!--<div class="swiper-pagination"></div>-->
+                <!-- Add Navigation -->
+                <!--<div class="swiper-button-prev"></div>-->
+                <!--<div class="swiper-button-next"></div>-->
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+
+    </div>
+    <div class="h-20"></div>
+
+    <div class="all-width h-b-120"></div>
+
+    <div class="clear"></div>
+
+
+    <div class="all-width">
+
+        <div class="contact-wrapper">
+            <div class="contact">
+                <div class="contact-div contact-l">
+                    <p>微信</p>
+                    <br>
+                    <img width="150px" height="150px" src="../img/wx.png"/>
+                </div>
+                <div class="contact-div contact-c">
+                    <p>联系QQ：100</p>
+                    <p>手机号码：130000000</p>
+                    <p>联系邮箱：contact</p>
+                </div>
+                <div class="contact-div contact-r">
+                    <p>联系地址：XXX省XXX市XXX县XXX路XXX号</p>
+                    <p>联系电话：020-000000 400-000000</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="clear"></div>
+
+
+    <div class="foot-wrapper">
+        <div class="copyright">
+            ©2017 内蒙古地达管道工程有限公司 版权所有
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script>
+
+    function dolog(_info, _callback) {
+        var img = new Image();
+        img.onload = img.onerror = _callback;
+        img.src = 'http://www.jq-school.com/images/logo.gif';
+    }
+
+    var layerWxcode = document.getElementById('layerWxcode');
+    function onMouseoverXCode() {
+        layerWxcode.className = 'towdimcodelayer js-transition js-show-up';
+    }
+    function onMouseoutXCode() {
+        layerWxcode.className = 'towdimcodelayer js-transition';
+    }
+
+    //    var usl = $('.us-l');
+    //    var usr = $('.us-r');
+    //    var psl = $('.ps-l');
+    //    var psr = $('.ps-r');
+    var copyright = $('.copyright');
+    //
+    //    moveEle(usl,usr);
+    ////    setTimeout("moveEle(usr)", 600);
+    //    moveEle1(psl);
+    //    setTimeout("moveEle1(psr)", 600);
+    moveEle(copyright);
+    //
+    function moveEle(ele) {
+        if ($(window).scrollTop() + $(window).height() >= ele.offset().top) {
+            ele.animate({left: '0px'}, 1000, 'easeInOutBack', function () {
+            });
+        }
+    }
+    //
+    //    function moveEle(ele,ele2) {
+    //        if ($(window).scrollTop() + $(window).height() >= ele.offset().top) {
+    //            ele.animate({left: '0px'},1000,'easeInOutBack',function () {
+    //                ele2.show();
+    //                moveEle(ele2);
+    //            });
+    //        }
+    //    }
+    //
+    $(window).scroll(function () {
+        moveEle(copyright);
+    })
+
+
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="../css/reset.css" rel="stylesheet">
+    <link type="text/css" href="../css/index.css" rel="stylesheet">
+    <link type="text/css" href="../css/contact.css" rel="stylesheet">
+    <!--<link type="text/css" href="./css/swiper-3.4.2.min.css" rel="stylesheet">-->
+</head>
+<body>
+
+<div class="header-wrapper">
+    <div class="header-t">
+        <div class="logo">111</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="product.html">产品</a></li>
+                <li><a href="news.html">动态</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="pic">
+    <img width="100%" height="100%" src="http://www.com.com/kw/img/pro/banner1.jpg" />
+</div>
+
+<div class="main">
+    <div class="about">
+        <div class="about-div about-l">
+            联系
+            CONTACT
+        </div>
+        <div class="about-div about-c">
+            联系QQ：258506508
+            手机号码：130000000
+            联系邮箱：contact@fkadjkhsf.co
+        </div>
+        <div class="about-div about-r">
+            联系地址：XXX省XXX市XXX县XXX路XXX号
+            联系电话：020-000000 400-000000
+        </div>
+    </div>
+
+    <div class="baidu-map">
+    </div>
+</div>
+
+
+<div class="all-width h-b-120"></div>
+
+<div class="clear"></div>
+
+
+<div class="all-width">
+
+    <div class="contact-wrapper">
+        <div class="contact">
+            <div class="contact-div contact-l">
+                <p>微信</p>
+                <br>
+                <img width="150px" height="150px" src="../img/wx.png">
+            </div>
+            <div class="contact-div contact-c">
+                <p>联系QQ：100</p>
+                <p>手机号码：130000000</p>
+                <p>联系邮箱：contact</p>
+            </div>
+            <div class="contact-div contact-r">
+                <p>联系地址：XXX省XXX市XXX县XXX路XXX号</p>
+                <p>联系电话：020-000000 400-000000</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="clear"></div>
+
+
+
+<div class="foot-wrapper">
+    <div class="copyright">
+        ©2016 网站样板-电子电工 版权所有
+    </div>
+</div>
+</body>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script>
+
+    var about = $('.about-div');
+    var copyright = $('.copyright');
+
+    moveEle(about);
+    moveEle(copyright);
+
+    function moveEle(ele) {
+        if ($(window).scrollTop() + $(window).height() >= ele.offset().top) {
+            ele.animate({left: '0px'},1200,'easeInOutBack',function () {
+                console.log('11')
+            });
+        }
+    }
+
+    $(window).scroll(function () {
+        moveEle(about);
+        moveEle(copyright);
+    })
+
+
+</script>
+</html>

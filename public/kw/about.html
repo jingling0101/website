@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="../css/reset.css" rel="stylesheet">
+    <link type="text/css" href="../css/index.css" rel="stylesheet">
+    <link type="text/css" href="../css/about.css" rel="stylesheet">
+    <!--<link type="text/css" href="./css/swiper-3.4.2.min.css" rel="stylesheet">-->
+</head>
+<body>
+
+<div class="header-wrapper">
+    <div class="header-t">
+        <div class="logo">111</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="product.html">施工设备</a></li>
+                <li><a href="news.html">工程案例</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="qq">
+    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=621019457&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:621019457:53" alt="业务咨询" /></a>
+</div>
+
+<div class="pic">
+    <img width="100%" height="100%" src="http://www.com.com/kw/img/pro/banner1.jpg" />
+</div>
+
+<div class="all-width h-b-120 tel">
+    <div></div>
+</div>
+
+<div class="clear"></div>
+
+<div class="main-wrapper">
+
+
+    <div class="us">
+        <div class="us-div us-l">
+            <img class="us-img" height="300px" src="../img/pro/news1.jpg">
+        </div>
+        <div class="us-div us-con us-r">
+            <p class="us-title"><span class="p-red us-red">关于我们</span> / about</p>
+            <p>
+                内蒙古地达管道工程有限公司是内蒙古专业从事非开挖技术研究和施工的专业公司。设备先进，技术过硬。
+                公司技术设备方面拥有各种型号额定回拖力为28T、32T、50T、80T、120T的定向钻机近十台（套），各类专业技术人员60余人。
+            </p>
+        </div>
+    </div>
+
+    <div class="us">
+        <div class="us-div us-con ps-r">
+            <p class="us-title"><span class="p-red us-red">承接</span> / service</p>
+            <p>
+                公司可承接全国范围内通信、电力、燃气、给排水等各种各类管道的非开挖施工任务。
+                良好的信誉、精良便捷的装备以及优秀的员工队伍，欢迎您的来电咨询！
+            </p>
+        </div>
+
+        <div class="us-div ps-l">
+            <img class="ps-img" height="300px" src="../img/pro/news2.jpg">
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+
+</div>
+
+
+<div class="all-width h-b-120"></div>
+
+<div class="clear"></div>
+
+
+<div class="all-width">
+
+    <div class="contact-wrapper">
+        <div class="contact">
+            <div class="contact-div contact-l">
+                <p>微信</p>
+                <br>
+                <img width="150px" height="150px" src="../img/wx.png">
+            </div>
+            <div class="contact-div contact-c">
+                <p>联系QQ：100</p>
+                <p>手机号码：130000000</p>
+                <p>联系邮箱：contact</p>
+            </div>
+            <div class="contact-div contact-r">
+                <p>联系地址：XXX省XXX市XXX县XXX路XXX号</p>
+                <p>联系电话：020-000000 400-000000</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="clear"></div>
+
+
+
+<div class="foot-wrapper">
+    <div class="copyright">
+        ©2016 网站样板-电子电工 版权所有
+    </div>
+</div>
+</body>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script>
+
+    var usl = $('.us-l');
+    var usr = $('.us-r');
+    var psl = $('.ps-l');
+    var psr = $('.ps-r');
+    var conL = $('.contact-l');
+    var conC = $('.contact-c');
+    var conR = $('.contact-r');
+
+
+
+    moveEle(conR);
+    moveEle2(conC,conL);
+
+    moveEle2(usl,usr);
+    moveEle(psl);
+    setTimeout("moveEle(psr)", 600);
+
+
+
+    function moveEle(ele) {
+        if ($(window).scrollTop() + $(window).height() >= ele.offset().top) {
+            ele.animate({left: '0px',opacity:'1'}, 1200, 'easeInOutBack', function () {
+                console.log('11')
+            });
+        }
+    }
+
+    function moveEle2(ele, ele2) {
+        if ($(window).scrollTop() + $(window).height() >= ele.offset().top) {
+            ele.animate({left: '0px',opacity:'1'}, 800, 'easeInOutBack', function () {
+                ele2.show();
+                moveEle(ele2);
+            });
+        }
+    }
+
+    function moveEle3(ele, ele2, ele3) {
+        if ($(window).scrollTop() + $(window).height() >= ele.offset().top) {
+            ele.animate({left: '0px',opacity:'1'}, 800, 'easeInOutBounce', function () {
+                ele2.animate({left: '0px',opacity:'1'}, 800, 'easeInOutBounce', function () {
+                    ele3.animate({left: '0px',opacity:'1'}, 800, 'easeInOutBounce', function () {
+
+                    });
+                });
+            });
+        }
+    }
+
+    $(window).scroll(function () {
+        moveEle2(usl,usr);
+        moveEle(psl);
+        moveEle(conR);
+        moveEle2(conC,conL);
+        setTimeout("moveEle(psr)", 600);
+
+    })
+
+
+</script>
+</html>

@@ -1,0 +1,86 @@
+
+
+/**
+关于我们
+ */
+.us{
+    width: 1100px;
+    height: 430px;
+    margin: 0 auto;
+}
+
+.us-div{
+    float: left;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 20px 50px 0 50px;
+}
+
+.us-l{
+    border: 2px solid red;
+    position: relative;
+    left: -250px;
+}
+.us-l .us-img{
+    left: 30px;
+    top: 30px;
+    position: relative;
+}
+
+.us-r{
+    position: relative;
+    z-index: -1;
+    left: -800px;
+    display: none;
+}
+
+.us-title{
+    margin: 20px 0;
+}
+.us-red{
+    font-size: 24px;
+}
+
+
+.us-con{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #777;
+
+}
+/**
+理念
+ */
+
+.ps-l{
+    border: 2px solid red;
+    position: relative;
+    z-index: -1;
+    right: -250px;
+}
+
+.ps-l .ps-img{
+    right: 30px;
+    top: 30px;
+    position: relative;
+}
+
+.ps-r{
+    position: relative;
+    z-index: -1;
+    right: -800px;
+}
+
+
+/**
+百度地图
+ */
+.baidu-map{
+    width: 1100px;
+    height: 200px;
+    background: red;
+    margin: 0 auto;
+}
